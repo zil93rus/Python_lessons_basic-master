@@ -7,6 +7,24 @@ __author__ = 'Ваши Ф.И.О.'
 # * постарайтесь решить задачу с применением арифметики и цикла while;
 # * при желании решите задачу с применением цикла for.
 
+import random
+number = str(random.randint(100,10000))
+print(number)
+i = 0
+while i < len(number):
+	print(number[i])
+	i += 1
+print("cycle while is done")
+for i in number:
+	print(i)
+print("cycle for is done")
+i = 0
+while number != 0:
+	x = int(number) % 10
+	print(x)
+	number = int(number) // 10
+print("var3")
+
 # код пишем тут...
 
 
@@ -17,7 +35,22 @@ __author__ = 'Ваши Ф.И.О.'
 #   или через арифметические действия
 # Не нужно решать задачу так:
 # print("a = ", b, "b = ", a) - это неправильное решение!
+a = input("please enter a: ")
+b = input("please enter b: ")
+print("a = ", a, "b = ", b)
+#c = a
+#a = b
+#b = c
+a, b = b, a
+print("a = ", a, "b = ", b)
+
+
 
 # Задача-3: Запросите у пользователя его возраст.
 # Если ему есть 18 лет, выведите: "Доступ разрешен",
 # иначе "Извините, пользование данным ресурсом только с 18 лет"
+age = int(input("How old are you: "))
+if age < 18:
+	print("Sorry!")
+else:
+	print("Hello, acces allowed")
